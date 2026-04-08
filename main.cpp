@@ -1,13 +1,13 @@
 #include "oop.h"
 
 int main () {
-    Circle c;
-    Square s;
-    Triangle t;
+    // Circle c;
+    // Square s;
+    // Triangle t;
     int which;
 
     while (true) {
-        cout << "1. Circle, 2. Square, 3. Triangle, 4. Exit\n" << endl;
+        cout << "1. Circle, 2. Square, 3. Triangle, 4. Exit" << endl;
         cin >> which;
         if (which == 4) break;
 
