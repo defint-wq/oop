@@ -30,8 +30,8 @@ class Circle : public Shape2D {
         double perimeter() override;
         void showCoordinate();
         void printName();
-        double getter(const double n, const double cx);
-        void setter();
+        double setter(const double n, const double cx);
+        void getter();
 
 };
 
@@ -47,8 +47,8 @@ class Square : public Shape2D {
         double perimeter() override;
         void printName();
         void ShowCoordinates();
-        double getter(const double n, const double cx, const double cy);
-        void setter();
+        double setter(const double n, const double cx, const double cy);
+        void getter();
 
 };
 
@@ -63,8 +63,8 @@ class Triangle : public Shape2D {
         double perimeter() override;
         void printName();    
         void showCoordinates();
-        double getter(const double n, const double cx, const double cy);
-        void setter();
+        double setter(const double n, const double cx, const double cy);
+        void getter();
 };
 
 #endif
