@@ -31,7 +31,7 @@ class Circle : public Shape2D {
         void showCoordinate();
         void printName();
         double getter(const double n, const double cx);
-        void setter()
+        void setter();
 
 };
 
