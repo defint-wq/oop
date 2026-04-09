@@ -4,15 +4,12 @@ double Triangle::setter(const double n, const double cx, const double cy) {
 
     side = n;
 
-    // дээд орой
     x0 = cx;
     y0 = cy;
 
-    // доод зүүн орой
     x1 = cx - side/2;
     y1 = cy - (sqrt(3)/2)*side;
 
-    // доод баруун орой
     x2 = cx + side/2;
     y2 = cy - (sqrt(3)/2)*side;
 
