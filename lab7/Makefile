@@ -2,6 +2,10 @@ all: go
 
 circle.o: cpp/circle.cpp oop.h
 	g++ -c cpp/circle.cpp -o circle.o
+
+max.o: cpp/max.cpp oop.h
+	g++ -c cpp/max.cpp -o max.o
+
 shape.o: cpp/shape.cpp oop.h
 	g++ -c cpp/shape.cpp -o shape.o
 
@@ -17,8 +21,9 @@ triangle.o: cpp/triangle.cpp oop.h
 main.o: main.cpp oop.h
 	g++ -c main.cpp -o main.o
 
-go: circle.o shape.o shape2d.o square.o triangle.o main.o
-	g++ circle.o shape.o shape2d.o square.o triangle.o main.o -o go
+
+go: circle.o max.o shape.o shape2d.o square.o triangle.o main.o
+	g++ circle.o max.o shape.o shape2d.o square.o triangle.o main.o -o go
 
 clean:
 	rm -v *.o go
