@@ -5,9 +5,7 @@ int main () {
     Shape2D *shapes[n] = {new Square(3), new Triangle(3), new Circle(3)};
     double* k = new double[n];
 
-    for (int i = 0; i < n; i++) {
-        k[i] = shapes[i]->area();
-    }
+    for (int i = 0; i < n; i++) k[i] = shapes[i]->area();
 
     int x = max(k, n);
 
