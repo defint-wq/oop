@@ -110,5 +110,7 @@ class Triangle : public Shape2D {
 
 void sortArea(Shape2D* list[], int n);
 void sortPerimeter(Shape2D* list[], int n);
+void print(Shape2D** shapes, int n);
+
 
 #endif

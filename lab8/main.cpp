@@ -42,15 +42,11 @@ int main () {
 
     sortArea(shapes, n);
     
-    for (int i = 0; i < n; i++) {
-        cout << "Name: " << shapes[i]->getName() << "    " << "Area: " << shapes[i]->area() << endl;
-    }
+    print(shapes, n);
 
     sortPerimeter(shapes, n);
 
-    for (int i = 0; i < n; i++) {
-        cout << "Name: " << shapes[i]->getName() << "    " << "Perimeter: " << shapes[i]->perimeter() << endl;
-    }
+    print(shapes, n);
 
     for (int i = 0; i < n; i++) {
         delete shapes[i];
