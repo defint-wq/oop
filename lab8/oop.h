@@ -19,8 +19,8 @@ class Shape {
         static int count;
     
     public:
-        Shape() { count ++; }
-        Shape(const string& name) : name(name) { count++; }        
+        Shape();
+        Shape(const string& name);       
         void setName(const string& name);
         string getName() const;
         static int getCount();
@@ -30,9 +30,9 @@ class Shape2D : public Shape {
     public:
 
         Shape2D() : Shape() {};
-        Shape2D(string name) : Shape(name) {}
-        virtual double area() = 0;
-        virtual double perimeter() = 0;
+        Shape2D(string name) : Shape(name) {};
+        virtual double area() const = 0;
+        virtual double perimeter() const = 0;
 };
 
 class Circle : public Shape2D {
@@ -41,24 +41,17 @@ class Circle : public Shape2D {
         double crd_2;
         double radius;
     public:
-        Circle() : Shape2D("Circle") {
-            radius = 0;
-            crd_1 = 0;
-            crd_2 = 0;
-        }
-        Circle(double r) : Shape2D("Circle") {
-            radius = r;
-        }        
-
-        double area() override;
-        double perimeter() override;
+        Circle();
+        Circle(double radius, double crd_1, double crd_2);
+        double area() const override;
+        double perimeter() const override;
         void showCoordinate();
-        void setRadius(const double n);
-        void setX(const double crd_1);
-        void setY(const double crd_2);
-        double getRadius();
-        double getX();
-        double getY();
+        void setRadius(double n);
+        void setX(double crd_1);
+        void setY(double crd_2);
+        double getRadius() const;
+        double getX() const;
+        double getY() const;
 
 };
 
@@ -70,20 +63,14 @@ class Square : public Shape2D {
         double x3, y3;
         double side;
     public:
-        Square() : Shape2D("Square") {
-        side = 0;
-        }
-
-        Square(double s) : Shape2D("Square") {
-        side = s;
-        }
-
-        double area() override;
-        double perimeter() override;
-        void ShowCoordinates();
+        Square();
+        Square(double side, double x0, double y0);
+        double area() const override;
+        double perimeter() const override;
+        void ShowCoordinates() const;
         void setSide(const double side);
-        void setCoordinates(const double x0, const double y0);
-        double getSide();
+        void setCoordinates(double x0, double y0);
+        double getSide() const;
 };
 
 class Triangle : public Shape2D {
@@ -93,18 +80,13 @@ class Triangle : public Shape2D {
         double x2, y2;
         double side;
     public:
-        Triangle() : Shape2D("Triangle") {
-        side = 0;
-        }
-
-        Triangle(double a) : Shape2D("Triangle") {
-        side = a;
-        }
-        double area() override;
-        double perimeter() override;
-        void showCoordinates();
-        void setSide(const double n);
-        void setCoordinates(const double x0, const double y0);
+        Triangle();
+        Triangle(double side, double x0, double y0);
+        double area() const override;
+        double perimeter() const override;
+        void showCoordinates() const;
+        void setSide(double n);
+        void setCoordinates(double x0, double y0);
         double getSide();
 };
 

@@ -18,19 +18,19 @@ int main () {
         case 1:
             cout << "Radius: ";
             cin >> radius;
-            shapes[i] = new Circle(radius);
+            shapes[i] = new Circle(radius, 0, 0);
             break;
         
         case 2:
             cout << "Side: ";
             cin >> side;
-            shapes[i] = new Square(side);
+            shapes[i] = new Square(side, 0, 0);
             break;
 
         case 3:
             cout << "Side: ";
             cin >> side;
-            shapes[i] = new Triangle(side);
+            shapes[i] = new Triangle(side, 0, 0);
             break;
             
         default:
