@@ -21,11 +21,14 @@ sort.o: functions/sort.cpp oop.h
 print.o: functions/print.cpp oop.h
 	g++ -c functions/print.cpp -o print.o
 
+obj_count.o: functions/count.cpp oop.h
+	g++ -c functions/count.cpp -o obj_count.o
+
 main.o: main.cpp oop.h
 	g++ -c main.cpp -o main.o
 
-go: circle.o sort.o print.o shape.o shape2d.o square.o triangle.o main.o
-	g++ circle.o sort.o print.o shape.o shape2d.o square.o triangle.o main.o -o go
+go: circle.o sort.o obj_count.o print.o shape.o shape2d.o square.o triangle.o main.o
+	g++ circle.o sort.o obj_count.o print.o shape.o shape2d.o square.o triangle.o main.o -o go
 
 clean:
 	rm -v *.o go

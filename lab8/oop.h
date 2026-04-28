@@ -6,12 +6,6 @@
 #include <cmath>
 using namespace std;
 
-struct Shapes {
-    string name;
-    double area;
-    double perimeter;
-};
-
 class Shape {
     protected:
         string name;
@@ -89,9 +83,10 @@ class Triangle : public Shape2D {
         double getSide();
 };
 
-void sortArea(Shape2D* list[], int n);
-void sortPerimeter(Shape2D* list[], int n);
-void print(Shape2D** shapes, int n);
+int obj_count();
+void sortArea(Shape2D* list[]);
+void sortPerimeter(Shape2D* list[]);
+void print(Shape2D** shapes);
 
 
 #endif

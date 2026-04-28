@@ -1,8 +1,8 @@
 #include "../oop.h"
 
-void sortArea(Shape2D* list[], int n) {
+void sortArea(Shape2D* list[]) {
     cout << endl;
-    for (int i = 1; i < n; i++) {
+    for (int i = 1; i < obj_count(); i++) {
         Shape2D* key = list[i];
         int j = i - 1;
 
@@ -15,9 +15,9 @@ void sortArea(Shape2D* list[], int n) {
     cout << "Sorted by Area..." << endl;
 }
 
-void sortPerimeter(Shape2D* list[], int n) {
+void sortPerimeter(Shape2D* list[]) {
     cout << endl;
-    for (int i = 1; i < n; i++) {
+    for (int i = 1; i < obj_count(); i++) {
         Shape2D* key = list[i];
         int j = i - 1;
 
