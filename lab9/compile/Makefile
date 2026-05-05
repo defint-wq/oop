@@ -18,7 +18,7 @@ person.o: ../classes/person/person.cpp ../classes/person/person.h
 spouse.o: ../classes/spouse/spouse.cpp ../classes/spouse/spouse.h 
 	g++ -c ../classes/spouse/spouse.cpp -o spouse.o
 
-main.o: ../main.cpp oop.h
+main.o: ../main.cpp ../oop.h
 	g++ -c ../main.cpp -o main.o
 
 go: child.o division.o employee.o jobDescription.o person.o spouse.o main.o
