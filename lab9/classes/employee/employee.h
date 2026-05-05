@@ -2,5 +2,6 @@
 #define EMPLOYEE_H
 
 #include "../include.h"
+#include "../person/person.h"
 
 #endif
