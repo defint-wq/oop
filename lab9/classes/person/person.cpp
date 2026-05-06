@@ -1,6 +1,4 @@
 #include "person.h"
-#include <iostream>
-using namespace std;
 
 Person::Person() : name(""), ssNum(""), age(0) {}
 

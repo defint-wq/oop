@@ -1,6 +1,4 @@
 #include "spouse.h"
-#include <iostream>
-using namespace std;
 
 Spouse::Spouse() : Person(), anniversaryDate("") {}
 
