@@ -5,13 +5,13 @@
 
 class Division {
 private:
-    std::string DivisionName;
+    string divisionName;
 
 public:
     Division();
-    Division(std::string name);
+    Division(string name);
 
-    std::string getDivisionName() const;
+    string getDivisionName() const;
     void print() const;
 };
 

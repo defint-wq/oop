@@ -1,12 +1,12 @@
 #include "../include.h"
-#include "JobDescription.h"
+#include "jobDescription.h"
 
 JobDescription::JobDescription() {}
 
 JobDescription::JobDescription(string desc) {
-    Description = desc;
+    description = desc;
 }
 
 void JobDescription::print() const {
-    cout << "Mergejil: " << Description << endl;
+    cout << "Mergejil: " << description << endl;
 }

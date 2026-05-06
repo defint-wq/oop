@@ -5,7 +5,7 @@
 
 class JobDescription {
 private:
-    string Description;
+    string description;
 
 public:
     JobDescription();

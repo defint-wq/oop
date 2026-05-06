@@ -1,16 +1,16 @@
 #include "../include.h"
-#include "Division.h"
+#include "division.h"
 
 Division::Division() {}
 
 Division::Division(string name) {
-    DivisionName = name;
+    divisionName = name;
 }
 
 string Division::getDivisionName() const {
-    return DivisionName;
+    return divisionName;
 }
 
 void Division::print() const {
-    cout << "Division: " << DivisionName << endl;
+    cout << "Division: " << divisionName << endl;
 }
