@@ -21,7 +21,7 @@ public:
     void setSSNum(string ssNum);
     void setAge(int age);
 
-    virtual void print() const;
+    void print() const;
 };
 
 #endif 

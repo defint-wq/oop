@@ -8,5 +8,5 @@ JobDescription::JobDescription(string desc) {
 }
 
 void JobDescription::print() const {
-    cout << "Mergejil: " << description << endl;
+    cout << "Мэргэжил: " << description << endl;
 }

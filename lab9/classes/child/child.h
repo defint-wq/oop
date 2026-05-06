@@ -9,10 +9,10 @@ class Child : public Person {
         
     public:
         Child();
-        Child(string favoriteToy);
+        Child(string name, string ssNum, int age, string favoriteToy);
         void setFavoriteToy(string favoriteToy);
         string getFavoriteToy() const;
-
+        void print() const;
 };
 
 #endif

@@ -14,7 +14,7 @@ void Person::setSSNum(string ssNum) { this->ssNum = ssNum; }
 void Person::setAge(int age)        { this->age = age; }
 
 void Person::print() const {
-    cout << "  Нэр    : " << name  << endl;
-    cout << "  НД дугаар: " << ssNum << endl;
-    cout << "  Нас    : " << age   << endl;
+    cout << "Нэр: " << name << endl;
+    cout << "Регистрийн дугаар: " << ssNum << endl;
+    cout << "Нас: " << age << endl;
 }

@@ -4,18 +4,24 @@
 
 #include "../person/person.h"
 
+struct Dates {
+    int year;
+    int month;
+    int day;
+};
+
 class Spouse : public Person {
 private:
-    string anniversaryDate; 
+    Dates anniversaryDate; 
 
 public:
     Spouse();
-    Spouse(string name, string ssNum, int age, string anniversaryDate);
+    Spouse(string name, string ssNum, int age, Dates anniversaryDate);
 
-    string getAnniversaryDate() const;
-    void   setAnniversaryDate(string date);
+    Dates getAnniversaryDate() const;
+    void   setAnniversaryDate(Dates date);
 
-    void print() const override;
+    void print() const;
 };
 
 #endif 

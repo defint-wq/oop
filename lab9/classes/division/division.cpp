@@ -12,5 +12,5 @@ string Division::getDivisionName() const {
 }
 
 void Division::print() const {
-    cout << "Division: " << divisionName << endl;
+    cout << "Салбар: " << divisionName << endl;
 }
