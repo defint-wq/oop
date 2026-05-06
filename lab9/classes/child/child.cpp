@@ -1,6 +1,6 @@
 #include "child.h"
 
-Child::Child() { this->favoriteToy = "Toy"; } 
+Child::Child() { this->favoriteToy = ""; } 
 
 Child::Child(string name, string ssNum, int age, string favoriteToy) 
 { 

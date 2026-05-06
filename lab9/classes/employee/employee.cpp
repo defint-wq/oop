@@ -66,11 +66,11 @@ void Employee::print() const
     cout << "Хэлтэс: " << this->division.getDivisionName() << endl;
 
     // 5. Гэр бүлийн байдал
-    cout << "--- Гэр бүлийн хүн ---" << endl;
+    cout << "\n--- Гэр бүлийн хүн ---" << endl;
     this->spouse.print(); 
 
     // 6. Ажлын тодорхойлолтууд
-    cout << "\n--- Ажлын тодорхойлолтууд (" << jobDescriptions.size() << ") ---" << endl;
+    cout << "\n--- Ажлын тодорхойлолтууд ---" << endl;
     for (size_t i = 0; i < jobDescriptions.size(); ++i) {
         jobDescriptions[i].print(); 
     }
@@ -79,7 +79,7 @@ void Employee::print() const
     if (children.empty()) {
         cout << "\nХүүхэдгүй." << endl;
     } else {
-        cout << "\n--- Хүүхдүүд (" << children.size() << ") ---" << endl;
+        cout << "\n--- Хүүхдүүд ---" << endl;
         for (const auto& child : children) {
             child.print(); 
         }

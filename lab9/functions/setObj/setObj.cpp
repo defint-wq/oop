@@ -30,7 +30,6 @@ vector<Employee> setEmployees()
             cout << "Албан тушаал: "; cin >> ws; getline(cin, title);
             cout << "Ажилд орсон он (ЖЖЖЖ СС ӨӨ): "; cin >> date.year >> date.month >> date.day;
             cout << "Хэлтэс: "; cin >> ws; getline(cin, divName);
-            cout << "Мэргэжил: "; cin >> ws; getline(cin, jobName);
 
             Division div(divName);
             int jobCount;
@@ -67,8 +66,7 @@ vector<Employee> setEmployees()
             // --- Хүүхдүүдийн мэдээлэл авах ---
             int childCount;
             vector<Child> tempChildren;
-            cout << "Хэдэн хүүхэдтэй вэ? (Байхгүй бол 0): "; cin >> childCount;
-            for (int i = 0; i < childCount; i++) {
+            cout << "Хэдэн хүүхэдтэй вэ? (Байхгүй бол 0): "; cin >> childCount;            for (int i = 0; i < childCount; i++) {
                 string cName, cSSNum, cToy;
                 int cAge;
                 cout << i + 1 << "-р хүүхдийн нэр: "; cin >> ws; getline(cin, cName);
