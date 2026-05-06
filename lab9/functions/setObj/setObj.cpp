@@ -33,8 +33,17 @@ vector<Employee> setEmployees()
             cout << "Мэргэжил: "; cin >> ws; getline(cin, jobName);
 
             Division div(divName);
-            JobDescription job(jobName);
+            int jobCount;
+            vector<JobDescription> tempJobs;
+            cout << "Хэдэн ажлын тодорхойлолт нэмэх вэ? (Дор хаяж 1): "; cin >> jobCount;
+            if (jobCount < 1) jobCount = 1; // 1..n шаардлага хангах
 
+            for (int i = 0; i < jobCount; i++) {
+                string jobName;
+                cout << i + 1 << "-р мэргэжил: "; 
+                cin >> ws; getline(cin, jobName);
+                tempJobs.push_back(JobDescription(jobName));
+            }
             // --- Гэр бүлийн хүний мэдээлэл авах ---
             char hasSpouse;
             Spouse spouse; // Хоосон объект
@@ -73,9 +82,15 @@ vector<Employee> setEmployees()
 
             // --- Employee объектыг байгуулах ---
             // Эхний хүүхдийг дамжуулах (таны байгуулагч 1 Child нэхэж байгаа тул)
+            JobDescription firstJob = tempJobs[0];
             Child firstChild = tempChildren.empty() ? Child() : tempChildren[0];
-            Employee employee(name, ssNum, age, id, title, date, job, div, spouse, firstChild);
+            
+            Employee employee(name, ssNum, age, id, title, date, firstJob, div, spouse, firstChild);
 
+            // Бусад ажлын тодорхойлолтуудыг нэмэх
+            for (size_t i = 1; i < tempJobs.size(); i++) {
+                employee.setJobDescriptions(tempJobs[i]);
+            }
             // Хэрэв 1-ээс олон хүүхэдтэй бол бусдыг нь нэмэх
             for (size_t i = 1; i < tempChildren.size(); i++) {
                 employee.setChildren(tempChildren[i]);
