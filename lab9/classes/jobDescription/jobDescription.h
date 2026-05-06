@@ -3,4 +3,15 @@
 
 #include "../include.h"
 
+class JobDescription {
+private:
+    string Description;
+
+public:
+    JobDescription();
+    JobDescription(string desc);
+
+    void print() const;
+};
+
 #endif
