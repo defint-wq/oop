@@ -50,7 +50,7 @@ void Employee::print() const
     cout << "          АЖИЛТНЫ ДЭЛГЭРЭНГҮЙ ХУУДАС" << endl;
     cout << "==========================================" << endl;
 
-    // 1. Person классын мэдээлэл (Нэр, Регистр, Нас)
+    // 1. Person классын мэдээлэл
     // Удамшсан классын функцийг дуудаж байна
     this->Person::print(); 
 
@@ -58,24 +58,24 @@ void Employee::print() const
     cout << "Ажилтны ID: " << this->getCompanyId() << endl;
     cout << "Албан тушаал: " << this->getTitle() << endl;
     
-    // 3. Ажилд орсон огноо (Date бүтэц)
+    // 3. Ажилд орсон огноо
     cout << "Ажилд орсон: " << this->startDate.year << "/" 
          << this->startDate.month << "/" << this->startDate.day << endl;
 
-    // 4. Хэлтэс (Division объект)
+    // 4. Хэлтэс 
     cout << "Хэлтэс: " << this->division.getDivisionName() << endl;
 
-    // 5. Гэр бүлийн байдал (Spouse объект)
+    // 5. Гэр бүлийн байдал
     cout << "--- Гэр бүлийн хүн ---" << endl;
     this->spouse.print(); 
 
-    // 6. Ажлын тодорхойлолтууд (JobDescription векторын жагсаалт)
+    // 6. Ажлын тодорхойлолтууд
     cout << "\n--- Ажлын тодорхойлолтууд (" << jobDescriptions.size() << ") ---" << endl;
     for (size_t i = 0; i < jobDescriptions.size(); ++i) {
         jobDescriptions[i].print(); 
     }
 
-    // 7. Хүүхдүүдийн мэдээлэл (Child векторын жагсаалт)
+    // 7. Хүүхдүүдийн мэдээлэл
     if (children.empty()) {
         cout << "\nХүүхэдгүй." << endl;
     } else {
