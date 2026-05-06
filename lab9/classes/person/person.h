@@ -1,8 +1,7 @@
 #ifndef PERSON_H
 #define PERSON_H
 
-#include <string>
-using namespace std;
+#include "../include.h"
 
 class Person {
 private:

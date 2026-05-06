@@ -3,8 +3,6 @@
 #define SPOUSE_H
 
 #include "../person/person.h"
-#include <string>
-using namespace std;
 
 class Spouse : public Person {
 private:
