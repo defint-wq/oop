@@ -5,7 +5,7 @@ void List<T>::deleteNode(int index) {
     if (head == nullptr || index < 0) {
         return;
     }
-
+gi
     Node<T>* temp = head;
 
     if (index == 0) {
