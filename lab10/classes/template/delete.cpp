@@ -1,26 +1,29 @@
 #include "template.h"
 
 template <typename T>
-void LinkedList<T>::remove(int index) {
-    if (index < 0 || index >= _length || head == nullptr) {
+void List<T>::deleteNode(int index) {
+    if (head == nullptr || index < 0) {
         return;
     }
 
     Node<T>* temp = head;
 
-    // 2. Хэрэв хамгийн эхний элементийг (index 0) устгах бол
     if (index == 0) {
         head = head->next;
-        delete temp;  
-    } 
-    else {
-        Node<T>* prev = nullptr;
-        for (int i = 0; i < index; i++) {
-            prev = temp;
-            temp = temp->next;
-        }
-        prev->next = temp->next;
         delete temp; 
+        return;
     }
-    _length--;
+
+    Node<T>* prev = nullptr;
+    for (int i = 0; i < index && temp != nullptr; i++) {
+        prev = temp;
+        temp = temp->next;
+    }
+
+    if (temp == nullptr) {
+        return;
+    }
+
+    prev->next = temp->next;
+    delete temp;
 }
