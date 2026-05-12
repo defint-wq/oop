@@ -3,6 +3,8 @@
 
 #include <iostream>
 #include <string>
+#include <cmath>
+#include <random>
 using namespace std;
 
 #endif

@@ -1,4 +1,4 @@
-#include "../oop.h"
+#include "square.h"
 
 Square::Square() : Shape2D("Square") {
     this->side = 0;
