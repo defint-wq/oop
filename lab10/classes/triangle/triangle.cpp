@@ -1,4 +1,4 @@
-#include "triangle.h"
+#include "triangle.hpp"
 
 Triangle::Triangle() : Shape2D("Triangle") {
     this->side = 0;

@@ -1,7 +1,7 @@
-#ifndef SHAPE2D_H
-#define SHAPE2D_H
-#include "../shape/shape.h"
-#include "../include.h"
+#ifndef SHAPE2D_HPP
+#define SHAPE2D_HPP
+#include "../shape/shape.hpp"
+#include "../include.hpp"
 
 class Shape2D : public Shape {
     public:

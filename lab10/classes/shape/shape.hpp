@@ -1,7 +1,7 @@
-#ifndef SHAPE_H
-#define SHAPE_H
+#ifndef SHAPE_HPP
+#define SHAPE_HPP
 
-#include "../include.h"
+#include "../include.hpp"
 
 class Shape {
     protected:

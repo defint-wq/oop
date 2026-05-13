@@ -1,4 +1,4 @@
-#include "circle.h"
+#include "circle.hpp"
 
 Circle::Circle() : Shape2D("Circle") {
     this->radius = 0;

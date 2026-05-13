@@ -1,14 +1,14 @@
-#include "functions.h"
+#include "functions.hpp"
 
-template <typename T>
-void sortByArea(List<T> &shapeList) {
-    Node<T>* head = shapeList.getHead(); 
+void sortByArea(List<Shape2D*> &shapeList) {
+    Node<Shape2D*>* head = shapeList.getHead(); 
     
     if (head == nullptr || head->next == nullptr) return;
 
+    cout << Shape::getCount() << " objects sorting..." << endl << endl;
     bool swapped;
-    Node<T>* ptr1;
-    Node<T>* lptr = nullptr;
+    Node<Shape2D*>* ptr1;
+    Node<Shape2D*>* lptr = nullptr;
 
     do {
         swapped = false;
@@ -16,7 +16,7 @@ void sortByArea(List<T> &shapeList) {
 
         while (ptr1->next != lptr) {
             if (ptr1->shapes->area() > ptr1->next->shapes->area()) {
-                T temp = ptr1->shapes;
+                Shape2D* temp = ptr1->shapes;
                 ptr1->shapes = ptr1->next->shapes;
                 ptr1->next->shapes = temp;
                 swapped = true;

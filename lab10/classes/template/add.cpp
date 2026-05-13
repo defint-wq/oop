@@ -1,7 +1,8 @@
-#include "template.h"
+#include "template.hpp"
 
 template <typename T>
-void List<T>::add(T t) {
+void List<T>::add(T t) 
+{
     Node<T>* newNode = new Node<T>();
     newNode->shapes = t;
     newNode->next = nullptr;
@@ -16,4 +17,5 @@ void List<T>::add(T t) {
         }
         temp->next = newNode;
     }
+    len++;
 }

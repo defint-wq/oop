@@ -1,11 +1,10 @@
-#include "template.h"
+#include "template.hpp"
 
 template <typename T>
 void List<T>::deleteNode(int index) {
     if (head == nullptr || index < 0) {
         return;
     }
-gi
     Node<T>* temp = head;
 
     if (index == 0) {
@@ -26,4 +25,5 @@ gi
 
     prev->next = temp->next;
     delete temp;
+    len--;
 }

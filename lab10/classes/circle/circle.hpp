@@ -1,6 +1,6 @@
-#ifndef CIRCLE_H
-#define CIRCLE_H
-#include "../shape2d/shape2d.h"
+#ifndef CIRCLE_HPP
+#define CIRCLE_HPP
+#include "../shape2d/shape2d.hpp"
 
 class Circle : public Shape2D {
     private:

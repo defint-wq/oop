@@ -1,34 +1,34 @@
 all: go
 
-circle.o: classes/circle.cpp oop.h
-	g++ -c classes/circle.cpp -o circle.o
+circle.o: classes/circle/circle.cpp classes/circle/circle.hpp
+	g++ -c classes/circle/circle.cpp -o circle.o
 
-shape.o: classes/shape.cpp oop.h
-	g++ -c classes/shape.cpp -o shape.o
+shape.o: classes/shape/shape.cpp classes/shape/shape.hpp
+	g++ -c classes/shape/shape.cpp -o shape.o
 
-shape2d.o: classes/shape2d.cpp oop.h
-	g++ -c classes/shape2d.cpp -o shape2d.o
+square.o: classes/square/square.cpp classes/square/square.hpp
+	g++ -c classes/square/square.cpp -o square.o
 
-square.o: classes/square.cpp oop.h
-	g++ -c classes/square.cpp -o square.o
+triangle.o: classes/triangle/triangle.cpp classes/triangle/triangle.hpp
+	g++ -c classes/triangle/triangle.cpp -o triangle.o
 
-triangle.o: classes/triangle.cpp oop.h
-	g++ -c classes/triangle.cpp -o triangle.o
-
-sort.o: functions/sort.cpp oop.h
+sort.o: functions/sort.cpp functions/functions.hpp
 	g++ -c functions/sort.cpp -o sort.o
 
-print.o: functions/print.cpp oop.h
+print.o: functions/print.cpp functions/functions.hpp
 	g++ -c functions/print.cpp -o print.o
 
-obj_count.o: functions/count.cpp oop.h
-	g++ -c functions/count.cpp -o obj_count.o
+random.o: functions/randomShapes.cpp functions/functions.hpp
+	g++ -c functions/randomShapes.cpp -o random.o 
 
-main.o: main.cpp oop.h
+delete.o: functions/delete.cpp functions/functions.hpp
+	g++ -c functions/delete.cpp -o delete.o
+
+main.o: main.cpp oop.hpp
 	g++ -c main.cpp -o main.o
 
-go: circle.o sort.o obj_count.o print.o shape.o shape2d.o square.o triangle.o main.o
-	g++ circle.o sort.o obj_count.o print.o shape.o shape2d.o square.o triangle.o main.o -o go
+go: circle.o sort.o random.o delete.o print.o shape.o square.o triangle.o main.o
+	g++ circle.o sort.o random.o delete.o print.o shape.o square.o triangle.o main.o -o go
 
 clean:
 	rm -v *.o go

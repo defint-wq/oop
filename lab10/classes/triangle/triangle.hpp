@@ -1,6 +1,6 @@
-#ifndef TRIANGLE_H
-#define TRIANGLE_H
-#include "../shape2d/shape2d.h"
+#ifndef TRIANGLE_HPP
+#define TRIANGLE_HPP
+#include "../shape2d/shape2d.hpp"
 
 class Triangle : public Shape2D {
     private:

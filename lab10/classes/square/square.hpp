@@ -1,6 +1,6 @@
-#ifndef SQUARE_H
-#define SQUARE_H
-#include "../shape2d/shape2d.h"
+#ifndef SQUARE_HPP
+#define SQUARE_HPP
+#include "../shape2d/shape2d.hpp"
 
 class Square : public Shape2D {
     private:
