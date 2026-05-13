@@ -10,7 +10,7 @@
 
 template <typename T>
 struct Node {
-    T shapes; 
+    T val; 
     Node* next;
 };
 
@@ -34,7 +34,7 @@ template <typename T>
 void List<T>::add(T t) 
 {
     Node<T>* newNode = new Node<T>();
-    newNode->shapes = t;
+    newNode->val = t;
     newNode->next = nullptr;
 
     if (head == nullptr) {
@@ -95,7 +95,7 @@ void List<T>::insert(T t, int index) {
         return;
 
     Node<T>* newNode = new Node<T>();
-    newNode->shapes = t;
+    newNode->val = t;
     newNode->next = nullptr;
 
     if (index == 0) {
@@ -129,7 +129,7 @@ T List<T>::get(int index) {
         temp = temp->next;
     }
 
-    return temp->shapes;
+    return temp->val;
 }
 
 #endif

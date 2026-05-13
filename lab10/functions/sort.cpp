@@ -15,10 +15,10 @@ void sortByArea(List<Shape2D*> &shapeList) {
         ptr1 = head;
 
         while (ptr1->next != lptr) {
-            if (ptr1->shapes->area() > ptr1->next->shapes->area()) {
-                Shape2D* temp = ptr1->shapes;
-                ptr1->shapes = ptr1->next->shapes;
-                ptr1->next->shapes = temp;
+            if (ptr1->val->area() > ptr1->next->val->area()) {
+                Shape2D* temp = ptr1->val;
+                ptr1->val = ptr1->next->val;
+                ptr1->next->val = temp;
                 swapped = true;
             }
             ptr1 = ptr1->next;

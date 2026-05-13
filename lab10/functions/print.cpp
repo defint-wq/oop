@@ -7,7 +7,7 @@ void print(List<Shape2D*> &shapeList)
     int count = 1;
     while (curr)
     {
-        Shape2D* shape = curr->shapes;
+        Shape2D* shape = curr->val;
         if (shape) {
 
             cout << count << ".\t" << "Shape: " << shape->getName() << "\t\t" 
