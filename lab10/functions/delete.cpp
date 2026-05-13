@@ -1,7 +1,7 @@
 #include "functions.hpp"
 
 void clearShapes(List<Shape2D*>& shapeList) {
-    cout << endl <<"Deletting shapes" << endl;
+    cout << endl <<"Deletting shapes..." << endl;
     while (shapeList.length()) {
         Shape2D* s = shapeList.get(0);
         

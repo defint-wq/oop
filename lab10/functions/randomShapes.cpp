@@ -7,6 +7,8 @@ List<Shape2D*> makeRandoms() {
     uniform_int_distribution<> mySwitch(1, 3);
     uniform_int_distribution<> many(20, 30);
 
+    cout << "Making random shapes..." << endl << endl;
+
     List<Shape2D*> shapeList;
     int count = many(gen);
     for (int i = 0; i < count; i++)
