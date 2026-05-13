@@ -1,5 +1,5 @@
-#ifndef SHAPE_H
-#define SHAPE_H
+#ifndef CIRCLE_H
+#define CIRCLE_H
 #include "../shape2d/shape2d.h"
 
 class Circle : public Shape2D {

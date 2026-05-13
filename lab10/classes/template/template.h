@@ -24,8 +24,9 @@ class List{
         List(): head(nullptr), len(0) {}
         void add (T t);
         void insert(T t, int index);
+        Node<T>* getHead();
         T get(int index);
-        void delete(int index);
+        void deleteNode(int index);
         int length();
 };
 

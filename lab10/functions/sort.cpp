@@ -1,13 +1,15 @@
-#include "template.h"
-#include "oop.h" 
+#include "functions.h"
 
 template <typename T>
-void List<T>::sortByArea() {
+void sortByArea(List<T> &shapeList) {
+    Node<T>* head = shapeList.getHead(); 
+    
     if (head == nullptr || head->next == nullptr) return;
 
     bool swapped;
     Node<T>* ptr1;
     Node<T>* lptr = nullptr;
+
     do {
         swapped = false;
         ptr1 = head;
@@ -24,5 +26,3 @@ void List<T>::sortByArea() {
         lptr = ptr1;
     } while (swapped);
 }
-template class List<Shape2D*>;
-

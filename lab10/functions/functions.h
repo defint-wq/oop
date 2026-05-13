@@ -3,6 +3,9 @@
 #include "../classes/classes.h"
 
 void print();
-void sortArea();
+template <typename T>
+void sortByArea(List<T> &shapeList);
+template <typename T>
+List<T> makeRandoms();
 
 #endif
